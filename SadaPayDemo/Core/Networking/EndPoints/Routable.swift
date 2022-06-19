@@ -42,6 +42,6 @@ protocol Routable {
 extension Routable {
     
     var baseURLString: String { return
-        "https://ey3f2y0nre.execute-api.us-east-1.amazonaws.com/"
+        "https://api.github.com/"
     }
 }

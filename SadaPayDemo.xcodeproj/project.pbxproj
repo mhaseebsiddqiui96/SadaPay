@@ -18,6 +18,12 @@
 		0FD32D7A285FC80200F03462 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D76285FC80200F03462 /* Routable.swift */; };
 		0FD32D7B285FC80200F03462 /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D78285FC80200F03462 /* AlamofireClient.swift */; };
 		0FD32D7C285FC80200F03462 /* BaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D79285FC80200F03462 /* BaseAPIClient.swift */; };
+		0FD32D83285FC8D500F03462 /* RepoListEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D7F285FC8D500F03462 /* RepoListEndpoint.swift */; };
+		0FD32D84285FC8D500F03462 /* RepoListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D80285FC8D500F03462 /* RepoListService.swift */; };
+		0FD32D85285FC8D500F03462 /* APIRepoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D82285FC8D500F03462 /* APIRepoListModel.swift */; };
+		0FD32D87285FCBE500F03462 /* APIRepositoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D86285FCBE500F03462 /* APIRepositoryItem.swift */; };
+		0FD32D89285FCC9600F03462 /* APIRepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D88285FCC9600F03462 /* APIRepoOwner.swift */; };
+		0FD32D8B285FCCF600F03462 /* APIRepoLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D8A285FCCF600F03462 /* APIRepoLicense.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		0FD32D76285FC80200F03462 /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		0FD32D78285FC80200F03462 /* AlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
 		0FD32D79285FC80200F03462 /* BaseAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPIClient.swift; sourceTree = "<group>"; };
+		0FD32D7F285FC8D500F03462 /* RepoListEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListEndpoint.swift; sourceTree = "<group>"; };
+		0FD32D80285FC8D500F03462 /* RepoListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListService.swift; sourceTree = "<group>"; };
+		0FD32D82285FC8D500F03462 /* APIRepoListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRepoListModel.swift; sourceTree = "<group>"; };
+		0FD32D86285FCBE500F03462 /* APIRepositoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRepositoryItem.swift; sourceTree = "<group>"; };
+		0FD32D88285FCC9600F03462 /* APIRepoOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRepoOwner.swift; sourceTree = "<group>"; };
+		0FD32D8A285FCCF600F03462 /* APIRepoLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRepoLicense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 		0FD32D73285FC79E00F03462 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0FD32D7D285FC8AE00F03462 /* Service */,
 				0FD32D74285FC7A500F03462 /* Networking */,
 			);
 			path = Core;
@@ -110,6 +123,35 @@
 				0FD32D79285FC80200F03462 /* BaseAPIClient.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		0FD32D7D285FC8AE00F03462 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0FD32D7E285FC8D500F03462 /* RepoList */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0FD32D7E285FC8D500F03462 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				0FD32D7F285FC8D500F03462 /* RepoListEndpoint.swift */,
+				0FD32D80285FC8D500F03462 /* RepoListService.swift */,
+				0FD32D81285FC8D500F03462 /* APIModels */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		0FD32D81285FC8D500F03462 /* APIModels */ = {
+			isa = PBXGroup;
+			children = (
+				0FD32D82285FC8D500F03462 /* APIRepoListModel.swift */,
+				0FD32D86285FCBE500F03462 /* APIRepositoryItem.swift */,
+				0FD32D88285FCC9600F03462 /* APIRepoOwner.swift */,
+				0FD32D8A285FCCF600F03462 /* APIRepoLicense.swift */,
+			);
+			path = APIModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,9 +236,15 @@
 				0FD32D5E285FAFF500F03462 /* ViewController.swift in Sources */,
 				0FD32D5A285FAFF500F03462 /* AppDelegate.swift in Sources */,
 				0FD32D7C285FC80200F03462 /* BaseAPIClient.swift in Sources */,
+				0FD32D83285FC8D500F03462 /* RepoListEndpoint.swift in Sources */,
 				0FD32D7B285FC80200F03462 /* AlamofireClient.swift in Sources */,
+				0FD32D85285FC8D500F03462 /* APIRepoListModel.swift in Sources */,
+				0FD32D87285FCBE500F03462 /* APIRepositoryItem.swift in Sources */,
+				0FD32D84285FC8D500F03462 /* RepoListService.swift in Sources */,
+				0FD32D89285FCC9600F03462 /* APIRepoOwner.swift in Sources */,
 				0FD32D5C285FAFF500F03462 /* SceneDelegate.swift in Sources */,
 				0FD32D7A285FC80200F03462 /* Routable.swift in Sources */,
+				0FD32D8B285FCCF600F03462 /* APIRepoLicense.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
