@@ -12,6 +12,11 @@ import UIKit
 
 final class RepoListViewController: UIViewController {
 
+    // MARK: - UI Elements
+    
+    @IBOutlet weak var RepoListTableView: UITableView!
+    
+    
     // MARK: - Public properties -
 
     var presenter: RepoListPresenterInterface!
@@ -20,6 +25,16 @@ final class RepoListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Trending"
+        setupRepoListTableView()
+        
+    }
+    
+    // MARK: - TableView Setup
+    private func setupRepoListTableView() {
+        RepoListTableView.registerTableCell([RepositoryItemCell.self])
+        RepoListTableView.delegate = self
+        RepoListTableView.dataSource = self
     }
 
 }
@@ -27,4 +42,23 @@ final class RepoListViewController: UIViewController {
 // MARK: - Extensions -
 
 extension RepoListViewController: RepoListViewInterface {
+}
+
+
+// MARK: - Tableview DataSource and Delegate
+
+extension RepoListViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(RepositoryItemCell.self)", for: indexPath) as? RepositoryItemCell else {return UITableViewCell()}
+        
+        return cell
+    }
 }

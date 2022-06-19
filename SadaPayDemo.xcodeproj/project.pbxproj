@@ -36,6 +36,9 @@
 		0FD32DA4285FD23000F03462 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D9E285FD22F00F03462 /* PresenterInterface.swift */; };
 		0FD32DA5285FD23000F03462 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32D9F285FD23000F03462 /* ViewInterface.swift */; };
 		0FD32DA6285FD23000F03462 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DA0285FD23000F03462 /* InteractorInterface.swift */; };
+		0FD32DAA285FDAF900F03462 /* RepositoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DA8285FDAF900F03462 /* RepositoryItemCell.swift */; };
+		0FD32DAB285FDAF900F03462 /* RepositoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD32DA9285FDAF900F03462 /* RepositoryItemCell.xib */; };
+		0FD32DAE285FE1D200F03462 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		0FD32D9E285FD22F00F03462 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		0FD32D9F285FD23000F03462 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
 		0FD32DA0285FD23000F03462 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		0FD32DA8285FDAF900F03462 /* RepositoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryItemCell.swift; sourceTree = "<group>"; };
+		0FD32DA9285FDAF900F03462 /* RepositoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryItemCell.xib; sourceTree = "<group>"; };
+		0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 		0FD32D73285FC79E00F03462 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0FD32DAC285FE1BC00F03462 /* Extensions */,
 				0FD32D7D285FC8AE00F03462 /* Service */,
 				0FD32D74285FC7A500F03462 /* Networking */,
 			);
@@ -191,6 +198,7 @@
 		0FD32D99285FD1F100F03462 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
+				0FD32DA7285FD39800F03462 /* Cells */,
 				0FD32D8D285FD1BD00F03462 /* RepoListInterfaces.swift */,
 				0FD32D8E285FD1BD00F03462 /* RepoListPresenter.swift */,
 				0FD32D8F285FD1BD00F03462 /* RepoListViewController.swift */,
@@ -212,6 +220,23 @@
 				0FD32DA0285FD23000F03462 /* InteractorInterface.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		0FD32DA7285FD39800F03462 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0FD32DA8285FDAF900F03462 /* RepositoryItemCell.swift */,
+				0FD32DA9285FDAF900F03462 /* RepositoryItemCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0FD32DAC285FE1BC00F03462 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +309,7 @@
 				0FD32D66285FAFF700F03462 /* LaunchScreen.storyboard in Resources */,
 				0FD32D63285FAFF700F03462 /* Assets.xcassets in Resources */,
 				0FD32D61285FAFF500F03462 /* Main.storyboard in Resources */,
+				0FD32DAB285FDAF900F03462 /* RepositoryItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +327,7 @@
 				0FD32D93285FD1BD00F03462 /* RepoListInterfaces.swift in Sources */,
 				0FD32D7C285FC80200F03462 /* BaseAPIClient.swift in Sources */,
 				0FD32DA2285FD23000F03462 /* FormatterInterface.swift in Sources */,
+				0FD32DAE285FE1D200F03462 /* UITableView+Ext.swift in Sources */,
 				0FD32D98285FD1BD00F03462 /* RepoListWireframe.swift in Sources */,
 				0FD32D83285FC8D500F03462 /* RepoListEndpoint.swift in Sources */,
 				0FD32D7B285FC80200F03462 /* AlamofireClient.swift in Sources */,
@@ -312,6 +339,7 @@
 				0FD32D87285FCBE500F03462 /* APIRepositoryItem.swift in Sources */,
 				0FD32D84285FC8D500F03462 /* RepoListService.swift in Sources */,
 				0FD32D89285FCC9600F03462 /* APIRepoOwner.swift in Sources */,
+				0FD32DAA285FDAF900F03462 /* RepositoryItemCell.swift in Sources */,
 				0FD32D94285FD1BD00F03462 /* RepoListPresenter.swift in Sources */,
 				0FD32D5C285FAFF500F03462 /* SceneDelegate.swift in Sources */,
 				0FD32D7A285FC80200F03462 /* Routable.swift in Sources */,
