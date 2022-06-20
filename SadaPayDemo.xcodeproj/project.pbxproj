@@ -47,6 +47,8 @@
 		0FD32DC4285FFAC900F03462 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DC3285FFAC900F03462 /* UIView+Ext.swift */; };
 		0FD32DC7285FFCD400F03462 /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DC6285FFCD400F03462 /* NoInternetView.swift */; };
 		0FD32DC92860027C00F03462 /* Error+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DC82860027C00F03462 /* Error+Ext.swift */; };
+		0FD32DCB2860064300F03462 /* UINavigationBar+ Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DCA2860064300F03462 /* UINavigationBar+ Ext.swift */; };
+		0FD32DCD2860081D00F03462 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FD32DCC2860081D00F03462 /* ColorAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		0FD32DC3285FFAC900F03462 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		0FD32DC6285FFCD400F03462 /* NoInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
 		0FD32DC82860027C00F03462 /* Error+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Ext.swift"; sourceTree = "<group>"; };
+		0FD32DCA2860064300F03462 /* UINavigationBar+ Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+ Ext.swift"; sourceTree = "<group>"; };
+		0FD32DCC2860081D00F03462 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +131,7 @@
 				0FD32DC5285FFCB500F03462 /* Views */,
 				0FD32D8C285FCF9400F03462 /* Modules */,
 				0FD32D73285FC79E00F03462 /* Core */,
-				0FD32D59285FAFF500F03462 /* AppDelegate.swift */,
-				0FD32D5B285FAFF500F03462 /* SceneDelegate.swift */,
+				0FD32DCE2860097300F03462 /* App */,
 				0FD32D5D285FAFF500F03462 /* ViewController.swift */,
 				0FD32D5F285FAFF500F03462 /* Main.storyboard */,
 				0FD32DB7285FF16E00F03462 /* Assets */,
@@ -255,6 +258,7 @@
 				0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */,
 				0FD32DC3285FFAC900F03462 /* UIView+Ext.swift */,
 				0FD32DC82860027C00F03462 /* Error+Ext.swift */,
+				0FD32DCA2860064300F03462 /* UINavigationBar+ Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +277,7 @@
 				0FD32DBE285FF8B800F03462 /* retryLotte.json */,
 				0FD32D62285FAFF700F03462 /* Assets.xcassets */,
 				0FD32DB5285FF16900F03462 /* ImageConstants.swift */,
+				0FD32DCC2860081D00F03462 /* ColorAssets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -283,6 +288,15 @@
 				0FD32DC6285FFCD400F03462 /* NoInternetView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0FD32DCE2860097300F03462 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0FD32D59285FAFF500F03462 /* AppDelegate.swift */,
+				0FD32D5B285FAFF500F03462 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +373,7 @@
 				0FD32D66285FAFF700F03462 /* LaunchScreen.storyboard in Resources */,
 				0FD32D63285FAFF700F03462 /* Assets.xcassets in Resources */,
 				0FD32DBF285FF8B800F03462 /* retryLotte.json in Resources */,
+				0FD32DCD2860081D00F03462 /* ColorAssets.xcassets in Resources */,
 				0FD32D61285FAFF500F03462 /* Main.storyboard in Resources */,
 				0FD32DAB285FDAF900F03462 /* RepositoryItemCell.xib in Resources */,
 			);
@@ -388,6 +403,7 @@
 				0FD32D7B285FC80200F03462 /* AlamofireClient.swift in Sources */,
 				0FD32DA5285FD23000F03462 /* ViewInterface.swift in Sources */,
 				0FD32D85285FC8D500F03462 /* APIRepoListModel.swift in Sources */,
+				0FD32DCB2860064300F03462 /* UINavigationBar+ Ext.swift in Sources */,
 				0FD32DA6285FD23000F03462 /* InteractorInterface.swift in Sources */,
 				0FD32DA1285FD23000F03462 /* BaseWireframe.swift in Sources */,
 				0FD32DC7285FFCD400F03462 /* NoInternetView.swift in Sources */,

@@ -27,8 +27,10 @@ final class RepoListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = presenter.title
+        self.navigationController?.setAppNavbar()
         setupRepoListTableView()
         presenter.viewLoaded()
+        self.view.backgroundColor = UIColor.whiteColor
        
     }
     

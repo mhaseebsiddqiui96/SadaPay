@@ -67,7 +67,7 @@ class NoInternetView: UIView {
                                      animationView.bottomAnchor.constraint(equalTo: retryButton.topAnchor, constant: -24),
                                      animationView.topAnchor.constraint(equalTo: topAnchor)])
         
-        self.backgroundColor = .white
+        self.backgroundColor = UIColor.whiteColor //UIColor(named: ColorConstants.whiteColor)
 
     }
     
