@@ -41,6 +41,7 @@
 		0FD32DAE285FE1D200F03462 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */; };
 		0FD32DB1285FE93800F03462 /* RepoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DB0285FE93800F03462 /* RepoListItemViewModel.swift */; };
 		0FD32DB4285FED4900F03462 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD32DB3285FED4900F03462 /* SDWebImage */; };
+		0FD32DB6285FF16900F03462 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DB5285FF16900F03462 /* ImageConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		0FD32DA9285FDAF900F03462 /* RepositoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryItemCell.xib; sourceTree = "<group>"; };
 		0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		0FD32DB0285FE93800F03462 /* RepoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListItemViewModel.swift; sourceTree = "<group>"; };
+		0FD32DB5285FF16900F03462 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +120,7 @@
 				0FD32D5B285FAFF500F03462 /* SceneDelegate.swift */,
 				0FD32D5D285FAFF500F03462 /* ViewController.swift */,
 				0FD32D5F285FAFF500F03462 /* Main.storyboard */,
-				0FD32D62285FAFF700F03462 /* Assets.xcassets */,
+				0FD32DB7285FF16E00F03462 /* Assets */,
 				0FD32D64285FAFF700F03462 /* LaunchScreen.storyboard */,
 				0FD32D67285FAFF700F03462 /* Info.plist */,
 			);
@@ -252,6 +254,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		0FD32DB7285FF16E00F03462 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0FD32D62285FAFF700F03462 /* Assets.xcassets */,
+				0FD32DB5285FF16900F03462 /* ImageConstants.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -336,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD32D96285FD1BD00F03462 /* RepoListInteractor.swift in Sources */,
+				0FD32DB6285FF16900F03462 /* ImageConstants.swift in Sources */,
 				0FD32DB1285FE93800F03462 /* RepoListItemViewModel.swift in Sources */,
 				0FD32D5E285FAFF500F03462 /* ViewController.swift in Sources */,
 				0FD32DA3285FD23000F03462 /* UIStoryboardExtension.swift in Sources */,

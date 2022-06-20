@@ -19,6 +19,10 @@ protocol RepoListViewInterface: ViewInterface {
 
 protocol RepoListPresenterInterfaceInput: PresenterInterface {
 
+    var isLoading: Bool {get set}
+    var defaultRows: Int {get set}
+    var title: String {get set}
+    
     func viewLoaded()
 }
 

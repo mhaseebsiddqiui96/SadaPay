@@ -17,6 +17,12 @@ final class RepoListPresenter {
     private unowned let view: RepoListViewInterface
     private let interactor: RepoListInteractorInterface
     private let wireframe: RepoListWireframeInterface
+    
+    // MARK: - ViewController Properies
+    
+    var isLoading: Bool = true
+    var defaultRows: Int = 100
+    var title: String = "Trending"
 
     // MARK: - Lifecycle -
 
@@ -36,6 +42,7 @@ final class RepoListPresenter {
 extension RepoListPresenter: RepoListPresenterInterfaceOutput {
     
     func presentListOfRepos(_ model: APIRepoListModel) {
+        isLoading = false
         let listOfRepos = model.items?.map({RepoListItemViewModel(model: $0)}) ?? []
         view.displayListOfRepos(listOfRepos)
     }
@@ -45,6 +52,7 @@ extension RepoListPresenter: RepoListPresenterInterfaceOutput {
 extension RepoListPresenter: RepoListPresenterInterfaceInput {
 
     func viewLoaded() {
+        isLoading = true
         interactor.getRepositories()
     }
 

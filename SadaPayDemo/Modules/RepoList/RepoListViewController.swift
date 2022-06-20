@@ -26,7 +26,7 @@ final class RepoListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Trending"
+        self.title = presenter.title
         setupRepoListTableView()
         presenter.viewLoaded()
     }
@@ -59,13 +59,15 @@ extension RepoListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listOfReposViewModel.count
+        return presenter.isLoading ? presenter.defaultRows : listOfReposViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(RepositoryItemCell.self)", for: indexPath) as? RepositoryItemCell else {return UITableViewCell()}
         
-        guard indexPath.row < listOfReposViewModel.count else { return UITableViewCell() }
+        cell.setTemplateWithSubviews(presenter.isLoading, animate: true, viewBackgroundColor: .systemBackground)
+
+        guard indexPath.row < listOfReposViewModel.count else { return cell }
         
         let model = listOfReposViewModel[indexPath.row]
         

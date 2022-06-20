@@ -127,6 +127,7 @@
                 <outlet property="ownerNameLabel" destination="lT0-I7-nsb" id="AOe-Pc-0OP"/>
                 <outlet property="repoDescLabel" destination="mMb-Un-hOk" id="7Iu-W4-6GK"/>
                 <outlet property="repoNameLabel" destination="SbG-K5-Z4Z" id="4nM-TB-PVd"/>
+                <outlet property="startCountImageView" destination="XQT-3T-apf" id="l2H-hA-1a0"/>
                 <outlet property="startCountLabel" destination="rX8-Vc-7ZO" id="d00-VJ-tWB"/>
             </connections>
             <point key="canvasLocation" x="225.36231884057972" y="246.76339285714283"/>
