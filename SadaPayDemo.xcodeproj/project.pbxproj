@@ -42,6 +42,10 @@
 		0FD32DB1285FE93800F03462 /* RepoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DB0285FE93800F03462 /* RepoListItemViewModel.swift */; };
 		0FD32DB4285FED4900F03462 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD32DB3285FED4900F03462 /* SDWebImage */; };
 		0FD32DB6285FF16900F03462 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DB5285FF16900F03462 /* ImageConstants.swift */; };
+		0FD32DBF285FF8B800F03462 /* retryLotte.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FD32DBE285FF8B800F03462 /* retryLotte.json */; };
+		0FD32DC2285FF9B500F03462 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD32DC1285FF9B500F03462 /* Lottie */; };
+		0FD32DC4285FFAC900F03462 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DC3285FFAC900F03462 /* UIView+Ext.swift */; };
+		0FD32DC7285FFCD400F03462 /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DC6285FFCD400F03462 /* NoInternetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +83,9 @@
 		0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		0FD32DB0285FE93800F03462 /* RepoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListItemViewModel.swift; sourceTree = "<group>"; };
 		0FD32DB5285FF16900F03462 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		0FD32DBE285FF8B800F03462 /* retryLotte.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = retryLotte.json; sourceTree = "<group>"; };
+		0FD32DC3285FFAC900F03462 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		0FD32DC6285FFCD400F03462 /* NoInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +96,7 @@
 				0FD32DB4285FED4900F03462 /* SDWebImage in Frameworks */,
 				0FD32D6F285FB25E00F03462 /* UIView-Shimmer in Frameworks */,
 				0FD32D72285FB2A100F03462 /* Alamofire in Frameworks */,
+				0FD32DC2285FF9B500F03462 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +122,7 @@
 		0FD32D58285FAFF500F03462 /* SadaPayDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0FD32DC5285FFCB500F03462 /* Views */,
 				0FD32D8C285FCF9400F03462 /* Modules */,
 				0FD32D73285FC79E00F03462 /* Core */,
 				0FD32D59285FAFF500F03462 /* AppDelegate.swift */,
@@ -242,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */,
+				0FD32DC3285FFAC900F03462 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,10 +267,19 @@
 		0FD32DB7285FF16E00F03462 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				0FD32DBE285FF8B800F03462 /* retryLotte.json */,
 				0FD32D62285FAFF700F03462 /* Assets.xcassets */,
 				0FD32DB5285FF16900F03462 /* ImageConstants.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		0FD32DC5285FFCB500F03462 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FD32DC6285FFCD400F03462 /* NoInternetView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +302,7 @@
 				0FD32D6E285FB25E00F03462 /* UIView-Shimmer */,
 				0FD32D71285FB2A100F03462 /* Alamofire */,
 				0FD32DB3285FED4900F03462 /* SDWebImage */,
+				0FD32DC1285FF9B500F03462 /* Lottie */,
 			);
 			productName = SadaPayDemo;
 			productReference = 0FD32D56285FAFF500F03462 /* SadaPayDemo.app */;
@@ -316,6 +336,7 @@
 				0FD32D6D285FB25E00F03462 /* XCRemoteSwiftPackageReference "UIView-Shimmer" */,
 				0FD32D70285FB2A100F03462 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				0FD32DB2285FED4900F03462 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				0FD32DC0285FF9B500F03462 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 0FD32D57285FAFF500F03462 /* Products */;
 			projectDirPath = "";
@@ -334,6 +355,7 @@
 				0FD32D97285FD1BD00F03462 /* RepoListViewController.xib in Resources */,
 				0FD32D66285FAFF700F03462 /* LaunchScreen.storyboard in Resources */,
 				0FD32D63285FAFF700F03462 /* Assets.xcassets in Resources */,
+				0FD32DBF285FF8B800F03462 /* retryLotte.json in Resources */,
 				0FD32D61285FAFF500F03462 /* Main.storyboard in Resources */,
 				0FD32DAB285FDAF900F03462 /* RepositoryItemCell.xib in Resources */,
 			);
@@ -350,6 +372,7 @@
 				0FD32DB6285FF16900F03462 /* ImageConstants.swift in Sources */,
 				0FD32DB1285FE93800F03462 /* RepoListItemViewModel.swift in Sources */,
 				0FD32D5E285FAFF500F03462 /* ViewController.swift in Sources */,
+				0FD32DC4285FFAC900F03462 /* UIView+Ext.swift in Sources */,
 				0FD32DA3285FD23000F03462 /* UIStoryboardExtension.swift in Sources */,
 				0FD32D5A285FAFF500F03462 /* AppDelegate.swift in Sources */,
 				0FD32D93285FD1BD00F03462 /* RepoListInterfaces.swift in Sources */,
@@ -363,6 +386,7 @@
 				0FD32D85285FC8D500F03462 /* APIRepoListModel.swift in Sources */,
 				0FD32DA6285FD23000F03462 /* InteractorInterface.swift in Sources */,
 				0FD32DA1285FD23000F03462 /* BaseWireframe.swift in Sources */,
+				0FD32DC7285FFCD400F03462 /* NoInternetView.swift in Sources */,
 				0FD32D95285FD1BD00F03462 /* RepoListViewController.swift in Sources */,
 				0FD32D87285FCBE500F03462 /* APIRepositoryItem.swift in Sources */,
 				0FD32D84285FC8D500F03462 /* RepoListService.swift in Sources */,
@@ -618,6 +642,14 @@
 				kind = branch;
 			};
 		};
+		0FD32DC0285FF9B500F03462 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -635,6 +667,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0FD32DB2285FED4900F03462 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		0FD32DC1285FF9B500F03462 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FD32DC0285FF9B500F03462 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -29,6 +29,9 @@ final class RepoListViewController: UIViewController {
         self.title = presenter.title
         setupRepoListTableView()
         presenter.viewLoaded()
+        self.view.showNoInternetView(retryTapped: {[weak self] in
+            self?.presenter.viewLoaded()
+        })
     }
     
     // MARK: - TableView Setup
