@@ -19,8 +19,8 @@ class AlamofireClient: NetworkInteractor {
     init() {
         let config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = HTTPHeaders.default.dictionary
-        config.timeoutIntervalForResource = TimeInterval(30) // seconds
-        config.timeoutIntervalForRequest  = TimeInterval(30) // seconds
+        config.timeoutIntervalForResource = TimeInterval(5) // seconds
+        config.timeoutIntervalForRequest  = TimeInterval(5) // seconds
         self.session = Alamofire.Session(configuration: config)
     }
     
@@ -62,4 +62,5 @@ class AlamofireClient: NetworkInteractor {
             return URLEncoding.default
         }
     }
+    
 }

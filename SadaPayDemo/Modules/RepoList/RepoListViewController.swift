@@ -29,9 +29,7 @@ final class RepoListViewController: UIViewController {
         self.title = presenter.title
         setupRepoListTableView()
         presenter.viewLoaded()
-        self.view.showNoInternetView(retryTapped: {[weak self] in
-            self?.presenter.viewLoaded()
-        })
+       
     }
     
     // MARK: - TableView Setup
@@ -48,8 +46,16 @@ final class RepoListViewController: UIViewController {
 extension RepoListViewController: RepoListViewInterface {
     
     func displayListOfRepos(_ viewModel: [RepoListItemViewModel]) {
+        
         self.listOfReposViewModel = viewModel
         self.RepoListTableView.reloadData()
+    }
+    
+    func displayNoInternetView() {
+        self.view.showNoInternetView(retryTapped: {[weak self] in
+            self?.view.hideNoInternetView()
+            self?.presenter.viewLoaded()
+        })
     }
 }
 

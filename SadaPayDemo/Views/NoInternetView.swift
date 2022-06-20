@@ -55,7 +55,7 @@ class NoInternetView: UIView {
         
         NSLayoutConstraint.activate([retryButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
          retryButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-         retryButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -24),
+                                     retryButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
                                      retryButton.heightAnchor.constraint(equalToConstant: 50)])
         
         retryButton.addTarget(self, action: #selector(retryTap), for: .touchUpInside)

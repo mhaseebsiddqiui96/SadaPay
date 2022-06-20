@@ -33,8 +33,8 @@ extension RepoListInteractor: RepoListInteractorInterface {
             case .success(let apiRepoList):
                 // It is Better to convert this api model to some entity model, as this api model contains logic for parsing json data so this should kept separated.
                 self.presenter?.presentListOfRepos(apiRepoList)
-            case .failure(_):
-                break
+            case .failure(let err):
+                self.presenter?.presentErrorInFetchingListOfRepos(err)
             }
         }
     }

@@ -46,6 +46,15 @@ extension RepoListPresenter: RepoListPresenterInterfaceOutput {
         let listOfRepos = model.items?.map({RepoListItemViewModel(model: $0)}) ?? []
         view.displayListOfRepos(listOfRepos)
     }
+    
+    func presentErrorInFetchingListOfRepos(_ error: Error) {
+        if error.checkRequestTimeOut() {
+            view.displayNoInternetView()
+        } else {
+            // do some error handling notify controller
+        }
+    }
+    
 }
 
 

@@ -15,6 +15,7 @@ protocol RepoListWireframeInterface: WireframeInterface {
 
 protocol RepoListViewInterface: ViewInterface {
     func displayListOfRepos(_ viewModel: [RepoListItemViewModel])
+    func displayNoInternetView()
 }
 
 protocol RepoListPresenterInterfaceInput: PresenterInterface {
@@ -28,6 +29,7 @@ protocol RepoListPresenterInterfaceInput: PresenterInterface {
 
 protocol RepoListPresenterInterfaceOutput: PresenterInterface {
     func presentListOfRepos(_ model: APIRepoListModel)
+    func presentErrorInFetchingListOfRepos(_ error: Error)
     
 }
 

@@ -46,6 +46,7 @@
 		0FD32DC2285FF9B500F03462 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD32DC1285FF9B500F03462 /* Lottie */; };
 		0FD32DC4285FFAC900F03462 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DC3285FFAC900F03462 /* UIView+Ext.swift */; };
 		0FD32DC7285FFCD400F03462 /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DC6285FFCD400F03462 /* NoInternetView.swift */; };
+		0FD32DC92860027C00F03462 /* Error+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DC82860027C00F03462 /* Error+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		0FD32DBE285FF8B800F03462 /* retryLotte.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = retryLotte.json; sourceTree = "<group>"; };
 		0FD32DC3285FFAC900F03462 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		0FD32DC6285FFCD400F03462 /* NoInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
+		0FD32DC82860027C00F03462 /* Error+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 			children = (
 				0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */,
 				0FD32DC3285FFAC900F03462 /* UIView+Ext.swift */,
+				0FD32DC82860027C00F03462 /* Error+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD32DC92860027C00F03462 /* Error+Ext.swift in Sources */,
 				0FD32D96285FD1BD00F03462 /* RepoListInteractor.swift in Sources */,
 				0FD32DB6285FF16900F03462 /* ImageConstants.swift in Sources */,
 				0FD32DB1285FE93800F03462 /* RepoListItemViewModel.swift in Sources */,

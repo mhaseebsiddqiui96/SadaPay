@@ -15,6 +15,7 @@ extension UIView {
     func showNoInternetView(retryTapped: @escaping () -> Void) {
         let animationView: NoInternetView = NoInternetView(frame: self.bounds)
         animationView.retryTapped = retryTapped
+        animationView.tag = UIView.noInternetViewTag
         
         animationView.frame = self.bounds
         
@@ -23,6 +24,11 @@ extension UIView {
         
         
         self.addSubview(animationView)
+        
+        NSLayoutConstraint.activate([animationView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+                                     animationView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+                                     animationView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+                                     animationView.topAnchor.constraint(equalTo: topAnchor)])
         
         // 6. Play animation
         
