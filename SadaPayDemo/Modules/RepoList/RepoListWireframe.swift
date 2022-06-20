@@ -18,8 +18,10 @@ final class RepoListWireframe: BaseWireframe<RepoListViewController> {
         let moduleViewController = RepoListViewController()
         super.init(viewController: moduleViewController)
 
-        let interactor = RepoListInteractor()
+        let interactor = RepoListInteractor(repositoryService: RepoListService(network: AlamofireClient()))
         let presenter = RepoListPresenter(view: moduleViewController, interactor: interactor, wireframe: self)
+        
+        interactor.presenter = presenter
         moduleViewController.presenter = presenter
     }
 

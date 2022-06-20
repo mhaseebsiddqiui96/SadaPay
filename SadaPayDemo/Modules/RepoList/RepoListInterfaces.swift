@@ -14,10 +14,21 @@ protocol RepoListWireframeInterface: WireframeInterface {
 }
 
 protocol RepoListViewInterface: ViewInterface {
+    func displayListOfRepos(_ viewModel: [RepoListItemViewModel])
 }
 
-protocol RepoListPresenterInterface: PresenterInterface {
+protocol RepoListPresenterInterfaceInput: PresenterInterface {
+
+    func viewLoaded()
+}
+
+protocol RepoListPresenterInterfaceOutput: PresenterInterface {
+    func presentListOfRepos(_ model: APIRepoListModel)
+    
 }
 
 protocol RepoListInteractorInterface: InteractorInterface {
+    var presenter: RepoListPresenterInterfaceOutput? { get set }
+    
+    func getRepositories()
 }

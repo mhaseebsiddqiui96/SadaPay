@@ -39,6 +39,8 @@
 		0FD32DAA285FDAF900F03462 /* RepositoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DA8285FDAF900F03462 /* RepositoryItemCell.swift */; };
 		0FD32DAB285FDAF900F03462 /* RepositoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD32DA9285FDAF900F03462 /* RepositoryItemCell.xib */; };
 		0FD32DAE285FE1D200F03462 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */; };
+		0FD32DB1285FE93800F03462 /* RepoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD32DB0285FE93800F03462 /* RepoListItemViewModel.swift */; };
+		0FD32DB4285FED4900F03462 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD32DB3285FED4900F03462 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,7 @@
 		0FD32DA8285FDAF900F03462 /* RepositoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryItemCell.swift; sourceTree = "<group>"; };
 		0FD32DA9285FDAF900F03462 /* RepositoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryItemCell.xib; sourceTree = "<group>"; };
 		0FD32DAD285FE1D200F03462 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		0FD32DB0285FE93800F03462 /* RepoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD32DB4285FED4900F03462 /* SDWebImage in Frameworks */,
 				0FD32D6F285FB25E00F03462 /* UIView-Shimmer in Frameworks */,
 				0FD32D72285FB2A100F03462 /* Alamofire in Frameworks */,
 			);
@@ -198,6 +202,7 @@
 		0FD32D99285FD1F100F03462 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
+				0FD32DAF285FE88E00F03462 /* ViewModel */,
 				0FD32DA7285FD39800F03462 /* Cells */,
 				0FD32D8D285FD1BD00F03462 /* RepoListInterfaces.swift */,
 				0FD32D8E285FD1BD00F03462 /* RepoListPresenter.swift */,
@@ -239,6 +244,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0FD32DAF285FE88E00F03462 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0FD32DB0285FE93800F03462 /* RepoListItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,6 +271,7 @@
 			packageProductDependencies = (
 				0FD32D6E285FB25E00F03462 /* UIView-Shimmer */,
 				0FD32D71285FB2A100F03462 /* Alamofire */,
+				0FD32DB3285FED4900F03462 /* SDWebImage */,
 			);
 			productName = SadaPayDemo;
 			productReference = 0FD32D56285FAFF500F03462 /* SadaPayDemo.app */;
@@ -290,6 +304,7 @@
 			packageReferences = (
 				0FD32D6D285FB25E00F03462 /* XCRemoteSwiftPackageReference "UIView-Shimmer" */,
 				0FD32D70285FB2A100F03462 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0FD32DB2285FED4900F03462 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 0FD32D57285FAFF500F03462 /* Products */;
 			projectDirPath = "";
@@ -321,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD32D96285FD1BD00F03462 /* RepoListInteractor.swift in Sources */,
+				0FD32DB1285FE93800F03462 /* RepoListItemViewModel.swift in Sources */,
 				0FD32D5E285FAFF500F03462 /* ViewController.swift in Sources */,
 				0FD32DA3285FD23000F03462 /* UIStoryboardExtension.swift in Sources */,
 				0FD32D5A285FAFF500F03462 /* AppDelegate.swift in Sources */,
@@ -582,6 +598,14 @@
 				kind = branch;
 			};
 		};
+		0FD32DB2285FED4900F03462 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -594,6 +618,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0FD32D70285FB2A100F03462 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		0FD32DB3285FED4900F03462 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FD32DB2285FED4900F03462 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

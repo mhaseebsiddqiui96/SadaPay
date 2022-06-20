@@ -33,5 +33,19 @@ final class RepoListPresenter {
 
 // MARK: - Extensions -
 
-extension RepoListPresenter: RepoListPresenterInterface {
+extension RepoListPresenter: RepoListPresenterInterfaceOutput {
+    
+    func presentListOfRepos(_ model: APIRepoListModel) {
+        let listOfRepos = model.items?.map({RepoListItemViewModel(model: $0)}) ?? []
+        view.displayListOfRepos(listOfRepos)
+    }
+}
+
+
+extension RepoListPresenter: RepoListPresenterInterfaceInput {
+
+    func viewLoaded() {
+        interactor.getRepositories()
+    }
+
 }

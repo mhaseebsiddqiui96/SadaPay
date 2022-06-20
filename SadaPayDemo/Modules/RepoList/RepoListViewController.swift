@@ -15,11 +15,12 @@ final class RepoListViewController: UIViewController {
     // MARK: - UI Elements
     
     @IBOutlet weak var RepoListTableView: UITableView!
+    var listOfReposViewModel: [RepoListItemViewModel] = []
     
     
     // MARK: - Public properties -
 
-    var presenter: RepoListPresenterInterface!
+    var presenter: RepoListPresenterInterfaceInput!
 
     // MARK: - Lifecycle -
 
@@ -27,7 +28,7 @@ final class RepoListViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Trending"
         setupRepoListTableView()
-        
+        presenter.viewLoaded()
     }
     
     // MARK: - TableView Setup
@@ -42,6 +43,11 @@ final class RepoListViewController: UIViewController {
 // MARK: - Extensions -
 
 extension RepoListViewController: RepoListViewInterface {
+    
+    func displayListOfRepos(_ viewModel: [RepoListItemViewModel]) {
+        self.listOfReposViewModel = viewModel
+        self.RepoListTableView.reloadData()
+    }
 }
 
 
@@ -53,11 +59,17 @@ extension RepoListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return listOfReposViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(RepositoryItemCell.self)", for: indexPath) as? RepositoryItemCell else {return UITableViewCell()}
+        
+        guard indexPath.row < listOfReposViewModel.count else { return UITableViewCell() }
+        
+        let model = listOfReposViewModel[indexPath.row]
+        
+        cell.setup(model)
         
         return cell
     }
